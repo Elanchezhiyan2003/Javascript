@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+</head>
+<body>
+    <!-- <button id="ch">Irukku</button> -->
+    <button id="au">2</button>
+    <script>
+
+        //Mouse Listener
+        // let btn= document.getElementById("ch")
+        // btn.addEventListener('click', (event)=>{
+        //     btn.textContent= 'Aana illa'
+        //     console.log('Clicked')
+        // });
+
+        // btn.addEventListener('mouseover', (event)=>{
+        //     btn.textContent= 'Oruvela Irukumo'
+        //     console.log('Clicked')
+        // });
+        
+        // btn.addEventListener('mouseout', (event)=>{
+        //     btn.textContent= 'Irukku'
+        //     console.log('Clicked')
+        // });
+
+        ///KeyBoard Listener
+        let cha = document.getElementById('au');
+
+        document.addEventListener('Keydown', (event)=>{
+            console.log(event.key);
+            switch(event.key){
+                case 'ArrowUp':
+                cha.textContent=Number(cha.textContent) + 1;
+                break;
+                case 'ArrowDown':
+                cha.textContent=Number(cha.textContent)-1;
+                break;
+            }
+        });
+    </script>
+</body>
+</html>
